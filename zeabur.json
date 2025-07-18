@@ -1,0 +1,17 @@
+{
+  "build": {
+    "command": "npm install"
+  },
+  "run": {
+    "command": "npm start"
+  },
+  "ports": [
+    {
+      "port": 3000,
+      "protocol": "http"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
