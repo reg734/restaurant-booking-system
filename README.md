@@ -39,6 +39,15 @@ PORT=3000
 ```
 
 4. 建立資料庫
+**方法一：自動初始化（推薦）**
+應用程式啟動時會自動建立資料表和管理員帳號。
+
+**方法二：手動初始化**
+```bash
+npm run setup
+```
+
+**方法三：使用 SQL 指令**
 執行 `database/schema.sql` 中的 SQL 指令來建立資料庫結構。
 
 5. 啟動伺服器
@@ -58,16 +67,13 @@ npm start
 
 ## 預設管理員帳號
 
-初次使用需要手動建立管理員帳號：
+應用程式啟動時會自動建立管理員帳號：
+- 帳號：`admin`
+- 密碼：`admin123`
 
+如需手動建立管理員帳號：
 ```bash
 node scripts/create-admin.js
-```
-
-或在資料庫中執行：
-```sql
-INSERT INTO users (username, password, email) 
-VALUES ('admin', '$2a$10$YourHashedPassword', 'admin@restaurant.com');
 ```
 
 ## API 端點
